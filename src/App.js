@@ -2,9 +2,8 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css"
 import { useState } from "react";
 import './App.css';
-
 function App() {
-
+ 
 
   const apiKey = "f56f24967aaf51182d1d4df628297c6d"
   const [inputCity, setInputCity] = useState("")
@@ -18,7 +17,7 @@ function App() {
       console.log("response", res.data)
       setData(res.data)
     }).catch((err) => {
-      console.log("err", err)
+      alert("City Not Found Please enter correct Details", err)
     })
   }
 
