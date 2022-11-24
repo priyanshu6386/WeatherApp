@@ -17,8 +17,9 @@ body{
 }
 .wetherResultBox{
   margin: auto;
-  width: 500px;
+  width: 400px;
   height: 300px;
+  background-color: skyblue;
 }
 .weathorIcon{
   margin-top: 2rem;
