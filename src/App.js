@@ -1,6 +1,7 @@
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css"
 import { useState } from "react";
+import swal from 'sweetalert';
 import './App.css';
 function App() {
  
@@ -17,7 +18,13 @@ function App() {
       console.log("response", res.data)
       setData(res.data)
     }).catch((err) => {
-      alert("City Not Found Please enter correct Details", err)
+      swal({
+        title: "Wrong Info",
+        text: "Please Enter Correct City Name or Zipcode!",
+        icon: "error",
+        button: "Ok",
+      });
+      
     })
   }
 
